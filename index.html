@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>施工中</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 40px 24px;
+    background: #f4f1ea;
+    color: #262421;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+  }
+
+  .wrap {
+    max-width: 680px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: clamp(56px, 15vw, 130px);
+    font-weight: 900;
+    letter-spacing: .12em;
+    line-height: 1.05;
+    text-indent: .12em;
+    color: #262421;
+  }
+
+  .bar {
+    width: 156px;
+    height: 6px;
+    margin: 26px auto 24px;
+    border-radius: 2px;
+    background: repeating-linear-gradient(45deg, #dfa635 0 10px, #2b2823 10px 20px);
+  }
+
+  .desc {
+    font-size: 15px;
+    line-height: 2;
+    color: #6b665e;
+  }
+
+  .desc a {
+    color: #a95f18;
+    text-decoration: none;
+    border-bottom: 1px dashed #b98a55;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <h1 class="title">施工中</h1>
+
+  <div class="bar"></div>
+
+  <p class="desc">
+    正在装修，请等待一段时间再访问<br>
+    也可联系 QQ：<a href="tencent://message/?uin=3631486907">3631486907</a>
+  </p>
+</div>
+
+</body>
+</html>
