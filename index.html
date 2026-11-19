@@ -3,71 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>施工中</title>
+<title>正在跳转…</title>
+<script>
+(function(){
+  var target = 'https://operfan.eu.cc/';
+  var host = location.hostname.toLowerCase();
+  // 部署在目标域名自身时不跳，避免自我循环
+  if (host === 'operfan.eu.cc' || host === 'www.operfan.eu.cc') return;
+  // 兜底：动态插入 meta refresh（仅非目标域名时），JS 跳转失败仍可跳
+  var m = document.createElement('meta');
+  m.httpEquiv = 'refresh';
+  m.content = '0;url=' + target;
+  document.head.appendChild(m);
+  location.replace(target);
+})();
+</script>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { height: 100%; }
-
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
-    padding: 40px 24px;
-    background: #f4f1ea;
-    color: #262421;
-    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    text-align: center;
+  html,body{height:100%;margin:0}
+  body{
+    display:flex;align-items:center;justify-content:center;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Microsoft YaHei",sans-serif;
+    background:#f7f8fa;color:#5f6368;font-size:15px;text-align:center;padding:24px;
   }
-
-  .wrap {
-    max-width: 680px;
-    width: 100%;
-  }
-
-  .title {
-    font-size: clamp(56px, 15vw, 130px);
-    font-weight: 900;
-    letter-spacing: .12em;
-    line-height: 1.05;
-    text-indent: .12em;
-    color: #262421;
-  }
-
-  .bar {
-    width: 156px;
-    height: 6px;
-    margin: 26px auto 24px;
-    border-radius: 2px;
-    background: repeating-linear-gradient(45deg, #dfa635 0 10px, #2b2823 10px 20px);
-  }
-
-  .desc {
-    font-size: 15px;
-    line-height: 2;
-    color: #6b665e;
-  }
-
-  .desc a {
-    color: #a95f18;
-    text-decoration: none;
-    border-bottom: 1px dashed #b98a55;
-  }
+  a{color:#3f51b5;text-decoration:none;font-weight:500}
+  a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
-
-<div class="wrap">
-  <h1 class="title">施工中</h1>
-
-  <div class="bar"></div>
-
-  <p class="desc">
-    正在装修，请等待一段时间再访问<br>
-    也可联系 QQ：<a href="tencent://message/?uin=3631486907">3631486907</a>
-  </p>
-</div>
-
+  <p>正在跳转至 <a href="https://operfan.eu.cc/">operfan.eu.cc</a>，如未自动跳转请点击此处。</p>
 </body>
 </html>
